@@ -1,6 +1,6 @@
 package desktop.reflection;
 
-public class Person {
+public abstract class Person {
     protected String name;
     int age;
 
@@ -19,17 +19,7 @@ public class Person {
         System.out.println("New person with the name " + this.name + " and the age " + this.age);
     }
 
-    void hello() {
-        System.out.println("Wonderful");
-    }
-
-    void greet(String name) {
-        System.out.println("Hello " + name);
-    }
-
-    int add(int x, int y) {
-        return x + y;
-    }
+    abstract void greet(String name);
 
     @Override
     public String toString() {

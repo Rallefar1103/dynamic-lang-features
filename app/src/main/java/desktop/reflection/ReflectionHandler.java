@@ -8,10 +8,12 @@ import java.lang.reflect.Method;
 public class ReflectionHandler {
     public void triggerReflectionStuff()
             throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException,
-            NoSuchMethodException, InvocationTargetException, InstantiationException {
+            NoSuchMethodException, InvocationTargetException, InstantiationException, ClassNotFoundException {
 
         // ---------------------------- FIELDS ---------------------------- //
-        var person = new Person();
+        var person = Class.forName("desktop.reflection.Employee");
+
+        System.out.println("Class we got was: " + person);
 
         var classObj = person.getClass();
 
@@ -22,13 +24,6 @@ public class ReflectionHandler {
 
         // Get class information at runtime
         for (Field field : fields) {
-            if (field.getType().isPrimitive()) {
-                System.out.println("Hey, primitive here!");
-            }
-
-            if (field.getType() == Integer.TYPE) {
-                System.out.println("Integer here!");
-            }
             System.out.println("Name: " + field.getName());
             System.out.println("Type: " + field.getType());
         }

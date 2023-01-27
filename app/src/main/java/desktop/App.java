@@ -13,7 +13,8 @@ public class App {
     }
 
     public static void main(String[] args) throws NoSuchFieldException, SecurityException, IllegalArgumentException,
-            IllegalAccessException, NoSuchMethodException, InvocationTargetException, InstantiationException {
+            IllegalAccessException, NoSuchMethodException, InvocationTargetException, InstantiationException,
+            ClassNotFoundException {
         var handler = new ReflectionHandler();
         handler.triggerReflectionStuff();
     }
