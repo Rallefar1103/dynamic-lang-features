@@ -17,5 +17,6 @@ public class App {
             ClassNotFoundException {
         var handler = new ReflectionHandler();
         handler.triggerReflectionStuff();
+
     }
 }
