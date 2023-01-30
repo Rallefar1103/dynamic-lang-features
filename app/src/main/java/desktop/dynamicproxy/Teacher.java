@@ -6,6 +6,7 @@ import java.util.Date;
 // proxy 
 public class Teacher {
     public static void main(String[] args) {
+        // DailySession is now a proxy for the Student!
         DailySession dailySession = new StudentProxy(new Attendance(new Date(), false));
         dailySession.attendLesson();
     }

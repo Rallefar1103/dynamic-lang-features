@@ -13,7 +13,5 @@ public class StudentProxy extends Student {
         } else {
             throw new RuntimeException("Student is not present and can't attend the lession");
         }
-
     }
-
 }
